@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'D2PCurvedModal_Example' do
+  pod 'D2PCurvedModal', :path => '../'
+
+  target 'D2PCurvedModal_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
