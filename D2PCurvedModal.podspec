@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'D2PCurvedModal'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of D2PCurvedModal.'
+  s.summary          = 'An elegant and curved modal View for iOS (Swift)'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+An elegant, animated, curved modal view for iOS iPhone made with love by DI2PRA.
                        DESC
 
   s.homepage         = 'https://github.com/di2pra/D2PCurvedModal'
@@ -26,15 +26,17 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'di2pra' => 'pas495@gmail.com' }
   s.source           = { :git => 'https://github.com/di2pra/D2PCurvedModal.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/di2pra'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'D2PCurvedModal/Classes/**/*'
   
   # s.resource_bundles = {
   #   'D2PCurvedModal' => ['D2PCurvedModal/Assets/*.png']
   # }
+
+  s.resource = 'D2PCurvedModal/Assets/*.{xcassets}'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

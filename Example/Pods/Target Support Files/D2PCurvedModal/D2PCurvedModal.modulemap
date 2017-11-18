@@ -1,0 +1,6 @@
+framework module D2PCurvedModal {
+  umbrella header "D2PCurvedModal-umbrella.h"
+
+  export *
+  module * { export * }
+}

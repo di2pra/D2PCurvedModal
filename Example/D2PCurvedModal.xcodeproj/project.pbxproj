@@ -15,6 +15,13 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8321D0832E21DC1F2BC31D3B /* Pods_D2PCurvedModal_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1CE2276BF426B0CDA09AC1 /* Pods_D2PCurvedModal_Tests.framework */; };
 		E3692C4D4A6A6F1752A7327D /* Pods_D2PCurvedModal_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9704C1E14157233BD2893F /* Pods_D2PCurvedModal_Example.framework */; };
+		E40371491FC0CB600000D712 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40371481FC0CB600000D712 /* TabBarController.swift */; };
+		E403714B1FC0CF080000D712 /* ColorFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E403714A1FC0CF080000D712 /* ColorFilterViewController.swift */; };
+		E403714D1FC0CFA30000D712 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E403714C1FC0CFA30000D712 /* Color.swift */; };
+		E403714F1FC0D2CB0000D712 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E403714E1FC0D2CB0000D712 /* ColorCell.swift */; };
+		E40371511FC0D99B0000D712 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40371501FC0D99B0000D712 /* Extension.swift */; };
+		E40371531FC0DFBA0000D712 /* SizeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40371521FC0DFBA0000D712 /* SizeFilterViewController.swift */; };
+		E40371551FC0E3740000D712 /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40371541FC0E3740000D712 /* SizeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +50,17 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7D0AE9380BA7A8C9A94FA10C /* Pods-D2PCurvedModal_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2PCurvedModal_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-D2PCurvedModal_Tests/Pods-D2PCurvedModal_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B64E37DF350A7C36F7C1F559 /* Pods-D2PCurvedModal_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2PCurvedModal_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-D2PCurvedModal_Example/Pods-D2PCurvedModal_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BB020105622FBB74936B4BF4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BB020105622FBB74936B4BF4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C91E49C6C21B9D28E37F3177 /* Pods-D2PCurvedModal_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2PCurvedModal_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D2PCurvedModal_Example/Pods-D2PCurvedModal_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D9755BB5D2EE4150EEB93BB5 /* D2PCurvedModal.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = D2PCurvedModal.podspec; path = ../D2PCurvedModal.podspec; sourceTree = "<group>"; };
-		F1A60F12D7916460DDC63A6C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D9755BB5D2EE4150EEB93BB5 /* D2PCurvedModal.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = D2PCurvedModal.podspec; path = ../D2PCurvedModal.podspec; sourceTree = "<group>"; };
+		E40371481FC0CB600000D712 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E403714A1FC0CF080000D712 /* ColorFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFilterViewController.swift; sourceTree = "<group>"; };
+		E403714C1FC0CFA30000D712 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E403714E1FC0D2CB0000D712 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		E40371501FC0D99B0000D712 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E40371521FC0DFBA0000D712 /* SizeFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeFilterViewController.swift; sourceTree = "<group>"; };
+		E40371541FC0E3740000D712 /* SizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
+		F1A60F12D7916460DDC63A6C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,13 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				E40371481FC0CB600000D712 /* TabBarController.swift */,
+				E403714A1FC0CF080000D712 /* ColorFilterViewController.swift */,
+				E403714C1FC0CFA30000D712 /* Color.swift */,
+				E403714E1FC0D2CB0000D712 /* ColorCell.swift */,
+				E40371501FC0D99B0000D712 /* Extension.swift */,
+				E40371521FC0DFBA0000D712 /* SizeFilterViewController.swift */,
+				E40371541FC0E3740000D712 /* SizeCell.swift */,
 			);
 			name = "Example for D2PCurvedModal";
 			path = D2PCurvedModal;
@@ -370,8 +391,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40371491FC0CB600000D712 /* TabBarController.swift in Sources */,
+				E40371531FC0DFBA0000D712 /* SizeFilterViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				E40371511FC0D99B0000D712 /* Extension.swift in Sources */,
+				E403714B1FC0CF080000D712 /* ColorFilterViewController.swift in Sources */,
+				E403714D1FC0CFA30000D712 /* Color.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				E40371551FC0E3740000D712 /* SizeCell.swift in Sources */,
+				E403714F1FC0D2CB0000D712 /* ColorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = D2PCurvedModal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -533,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = D2PCurvedModal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
