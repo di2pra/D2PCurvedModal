@@ -69,17 +69,17 @@ extension ViewController: UIViewControllerTransitioningDelegate {
 
 @IBAction func openModal(_ sender: Any) {
 
- let myCustomVC = MyCustomVC(nibName: "MyCustomVC", bundle: Bundle(for: MyCustomVC.self))
- let modalVC = D2PCurvedModal(nibName: "D2PCurvedModal", bundle: Bundle(for: D2PCurvedModal.self))
+    let myCustomVC = MyCustomVC(nibName: "MyCustomVC", bundle: Bundle(for: MyCustomVC.self))
+    let modalVC = D2PCurvedModal(nibName: "D2PCurvedModal", bundle: Bundle(for: D2PCurvedModal.self))
  
- modalVC.setUpViewOf(viewController: tabBarVC)
+    modalVC.setUpViewOf(viewController: myCustomVC)
  
- modalVC.containerHeight = 200
- modalVC.delegate = self
- modalVC.transitioningDelegate = self
- percentDrivenTransition.attachToViewController(viewController: modalVC)
+    modalVC.containerHeight = 200
+    modalVC.delegate = self
+    modalVC.transitioningDelegate = self
+    percentDrivenTransition.attachToViewController(viewController: modalVC)
  
- present(modalVC, animated: true, completion: nil)
+    present(modalVC, animated: true, completion: nil)
  
 }
 
