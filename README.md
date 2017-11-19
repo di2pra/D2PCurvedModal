@@ -9,7 +9,7 @@
   <tr>
     <th><img alt="Demo Gif" src="https://github.com/di2pra/D2PCurvedModal/blob/master/image/D2PCurvedModal.gif" width="300"></th>
     <th><img alt="Screenshot 1" src="https://github.com/di2pra/D2PCurvedModal/blob/master/image/screenshot_1.png" width="300"></th>
-    <th><img alt="Screenshot 2" src="https://github.com/di2pra/D2PCurvedModal/blob/master/image/screenshot_2.png" width="300"></th>`
+    <th><img alt="Screenshot 2" src="https://github.com/di2pra/D2PCurvedModal/blob/master/image/screenshot_2.png" width="300"></th>
   </tr>
 </table>
 
