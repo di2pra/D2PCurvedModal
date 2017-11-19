@@ -22,7 +22,7 @@ An elegant, animated and curved modal view for iOS iPhone made with love by DI2P
                        DESC
 
   s.homepage         = 'https://github.com/di2pra/D2PCurvedModal'
-  s.screenshots     = 'https://github.com/di2pra/D2PCurvedModal/blob/master/image/screenshot_1.png', 'https://github.com/di2pra/D2PCurvedModal/blob/master/image/screenshot_2.png'
+  s.screenshots     = 'https://raw.githubusercontent.com/di2pra/D2PCurvedModal/master/image/screenshot_1.png', 'https://raw.githubusercontent.com/di2pra/D2PCurvedModal/master/image/screenshot_2.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'di2pra' => 'pas495@gmail.com' }
   s.source           = { :git => 'https://github.com/di2pra/D2PCurvedModal.git', :tag => s.version.to_s }
