@@ -18,6 +18,15 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 The Example project use the modal as a Color/Size Picker.
 
+## Installation
+
+D2PCurvedModal is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'D2PCurvedModal'
+```
+
 ## How to Use?
 
 1) First install the Pod and import the module `D2PCurvedModal` to your file
@@ -161,15 +170,6 @@ Tells the delegate that the view of the specified modal view controller is about
 ## Requirements
 
 No Requirement
-
-## Installation
-
-D2PCurvedModal is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'D2PCurvedModal'
-```
 
 ## Author
 
