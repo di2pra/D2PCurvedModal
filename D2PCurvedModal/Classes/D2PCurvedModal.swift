@@ -8,7 +8,11 @@
 import UIKit
 
 @objc public protocol D2PCurvedModalDelegate: class {
+    
+    // Tells the delegate that the view of the specified modal view controller is about to be removed.
     @objc optional func modalWillClose(modalVC: D2PCurvedModal)
+    
+    //Tells the delegate that the view of the specified modal view controller is about to be displayed.
     @objc optional func modalWillOpen(modalVC: D2PCurvedModal)
 }
 
@@ -21,12 +25,13 @@ open class D2PCurvedModal: UIViewController {
     @IBOutlet weak var headerCurveView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak private var modalTitleLabel: UILabel!
+    
     private var closeBtn: UIButton!
     
-    public var backgroundColor: UIColor = .white
-    public var closeBtnColor: UIColor = UIColor(red:0.99, green:0.28, blue:0.25, alpha:1.0) // #FD4741
+    public var bgColor: UIColor = .white
+    public var closeBtnBgColor: UIColor = UIColor(red:0.99, green:0.28, blue:0.25, alpha:1.0) // #FD4741
+    public var closeBtnTintColor: UIColor = .white
     public var containerHeight: CGFloat = 300
-    public var headerCurveHeight:CGFloat = 50
     public var containerVC: UIViewController?
     
     public var delegate:D2PCurvedModalDelegate?
@@ -47,6 +52,7 @@ open class D2PCurvedModal: UIViewController {
         }
     }
     
+    private var headerCurveHeight:CGFloat = 50
     private var curveLayer = CAShapeLayer()
     
     /*lazy private var rectFrame: CGRect = {
@@ -61,19 +67,19 @@ open class D2PCurvedModal: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         self.modalPresentationStyle = .overCurrentContext
+        
+        // setting up the main layout and style
         headerCurveView.backgroundColor = .clear
-        containerView.backgroundColor = backgroundColor
+        containerView.backgroundColor = bgColor
         headerCurveViewHeight.constant = headerCurveHeight
         containerViewHeight.constant = containerHeight
         
         self.view.frame = UIScreen.main.bounds
         
+        // create and set up the close button
         setUpCloseBtn()
         
-        // Do any additional setup after loading the view.
         
     }
     
@@ -84,10 +90,11 @@ open class D2PCurvedModal: UIViewController {
     
     private func setUpCloseBtn() {
         
+        // close buttom type : custom
         closeBtn = UIButton(type: .custom)
         self.headerCurveView.addSubview(closeBtn)
         
-        // layout
+        // button layout
         closeBtn.translatesAutoresizingMaskIntoConstraints  = false
         closeBtn.layer.cornerRadius = headerCurveHeight * 0.5
         closeBtn.clipsToBounds = true
@@ -101,10 +108,9 @@ open class D2PCurvedModal: UIViewController {
             NSLayoutConstraint(item: closeBtn, attribute: .centerY, relatedBy: .equal, toItem: self.headerCurveView, attribute: .centerY, multiplier: 1, constant: 0)])
         
         
-        // style
-        closeBtn.backgroundColor = closeBtnColor
-        //closeBtn.adjustsImageWhenHighlighted = false
-        closeBtn.tintColor = .white
+        // button style
+        closeBtn.backgroundColor = closeBtnBgColor
+        closeBtn.tintColor = closeBtnTintColor
         
         if let image = UIImage(named: "checkmark", in: Bundle(for: type(of: self)), compatibleWith: nil) {
             closeBtn.setImage(image, for: .normal)
@@ -115,17 +121,18 @@ open class D2PCurvedModal: UIViewController {
         }
         
         
-        // action
+        // button action
         closeBtn.addTarget(self, action: #selector(self.closePressed), for: .touchUpInside)
-        
         
         
     }
     
+    // open method to specify the embedded view controller
     public func setUpViewOf(viewController vc: UIViewController) {
         self.containerVC = vc
     }
     
+    // open method to manually close the modal
     public func close(animated: Bool, completion: (() -> Void)?) {
         self.dismiss(animated: animated, completion: completion)
     }
@@ -142,13 +149,17 @@ open class D2PCurvedModal: UIViewController {
         _ = setupContainerView
     }
     
+    // view rotation event method
     override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
         super.viewWillTransition(to: size, with: coordinator)
         
         coordinator.animate(alongsideTransition: nil) { _ in
+            
+            // update the curvelayer path
             let path = UIBezierPath(ovalIn: self.getCurveFrame())
             self.curveLayer.path = path.cgPath
+            
         }
         
         super.viewWillTransition(to: size, with: coordinator)
@@ -157,6 +168,7 @@ open class D2PCurvedModal: UIViewController {
         
     }
     
+    // method to retrive the frame for the curve layer (depending on the main view size)
     private func getCurveFrame() -> CGRect {
         let height = self.view.frame.height
         let width = self.view.frame.width
@@ -164,6 +176,7 @@ open class D2PCurvedModal: UIViewController {
         return CGRect(x: -width * 1.5 + width*0.5, y: 0, width: width * 3, height: height * 2)
     }
     
+    // method to instantiate containerView layout (called only once in viewDidLayoutSubviews)
     lazy private var setupContainerView: Void = {
         
         if let vc = containerVC {
@@ -185,12 +198,13 @@ open class D2PCurvedModal: UIViewController {
         
     }()
     
+    // method to instantiate headerCurveView (called only once in viewDidLayoutSubviews)
     lazy private var setupTopCurve: Void = {
         
         let path = UIBezierPath(ovalIn: getCurveFrame())
         curveLayer.path = path.cgPath
         
-        curveLayer.fillColor = backgroundColor.cgColor
+        curveLayer.fillColor = bgColor.cgColor
         
         let layerView = UIView(frame: .zero)
         layerView.translatesAutoresizingMaskIntoConstraints = false
@@ -207,6 +221,7 @@ open class D2PCurvedModal: UIViewController {
         
         headerCurveView.sendSubview(toBack: layerView)
         
+        // setting up the modal title
         modalTitleLabel.text = modalTitle
         modalTitleLabel.textColor = modalTitleColor
         
