@@ -37,7 +37,7 @@ let transition = D2PCurvedModalTransition()
 ```Swift
 extension ViewController: UIViewControllerTransitioningDelegate {
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {`
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
        
         if presented is D2PCurvedModal {
             transition.opening = true
@@ -81,7 +81,6 @@ extension ViewController: UIViewControllerTransitioningDelegate {
     modalVC.setUpViewOf(viewController: myCustomVC)
  
     modalVC.containerHeight = 200
-    modalVC.delegate = self
     modalVC.transitioningDelegate = self
     percentDrivenTransition.attachToViewController(viewController: modalVC)
  
